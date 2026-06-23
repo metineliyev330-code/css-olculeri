@@ -14,6 +14,6 @@ h2{
 
 
 .metin2{
-    transform: translate(50px,20px) rotate(30deg) scale(1.5);
+    transform: translate(50px,20px), rotate(30deg), scale(1.5);
 }
 
