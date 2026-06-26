@@ -1,19 +1,430 @@
-.metin2{
-    width:100px;
-    height:100px;
-    bacground:red;
-}
-h2{
-    color:green;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    height:100%;
-}    
-
-
-.metin2{
-    transform: translate(50px,20px), rotate(30deg), scale(1.5);
+/* ==========================================
+   :root – CSS Dəyişənləri
+   ========================================== */
+:root {
+    --ana-reng: #2c3e50;
+    --ikinci-reng: #3498db;
+    --vurgu-rengi: #e74c3c;
+    --kart-fon: #ecf0f1;
+    --kart-radius: 12px;
 }
 
+/* ==========================================
+   Ümumi Stil (body, font)
+   ========================================== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+/* ==========================================
+   Başlıq Stilleri
+   ========================================== */
+h1 {
+    color: var(--ana-reng);
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: var(--ikinci-reng);
+    border-bottom: 2px solid var(--ikinci-reng);
+    padding-bottom: 10px;
+    margin-top: 30px;
+}
+
+/* ==========================================
+   Header ve Navigation
+   ========================================== */
+header {
+    background: linear-gradient(135deg, var(--ana-reng), var(--ikinci-reng));
+    color: white;
+    padding: 30px;
+    border-radius: var(--kart-radius);
+    margin-bottom: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffd700;
+    text-decoration: underline;
+}
+
+/* ==========================================
+   Section ve Article
+   ========================================== */
+section {
+    background: white;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: var(--kart-radius);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    max-width: 800px;
+}
+
+article {
+    background: var(--kart-fon);
+    padding: 20px;
+    border-radius: var(--kart-radius);
+    margin: 10px 0;
+}
+
+/* ==========================================
+   Paraqraf ve Mətn Elementləri
+   ========================================== */
+p {
+    margin: 10px 0;
+    text-align: justify;
+}
+
+blockquote {
+    border-left: 4px solid var(--ikinci-reng);
+    padding-left: 20px;
+    font-style: italic;
+    background: #f1f5f9;
+    margin: 15px 0;
+}
+
+pre {
+    background: #1e293b;
+    color: #e2e8f0;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+code {
+    font-family: 'Courier New', monospace;
+    background: #f1f5f9;
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+
+mark {
+    background: yellow;
+    padding: 2px 5px;
+}
+
+/* ==========================================
+   Siyahılar
+   ========================================== */
+ul, ol {
+    margin: 10px 0;
+    padding-left: 30px;
+}
+
+li {
+    margin: 5px 0;
+}
+
+dl dt {
+    font-weight: bold;
+    color: var(--ana-reng);
+}
+
+dl dd {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+/* ==========================================
+   Cədvəl Stili
+   ========================================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+thead {
+    background: var(--ana-reng);
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+tbody tr:hover {
+    background: #e0e0e0;
+}
+
+tfoot {
+    font-weight: bold;
+    background: #f9f9f9;
+}
+
+caption {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* ==========================================
+   Şəkil Stili
+   ========================================== */
+img {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+figure {
+    display: inline-block;
+    text-align: center;
+}
+
+figcaption {
+    font-style: italic;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* ==========================================
+   Form Elementləri
+   ========================================== */
+form {
+    text-align: left;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+label {
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 5px;
+    color: var(--ana-reng);
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--ikinci-reng);
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+input[type="radio"], input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+input[type="submit"], button {
+    width: auto;
+    background: var(--ikinci-reng);
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+input[type="submit"]:hover, button:hover {
+    background: var(--ana-reng);
+    transform: translateY(-2px);
+}
+
+input[type="submit"]:active, button:active {
+    transform: scale(0.98);
+}
+
+/* ==========================================
+   Select, Datalist, Progress, Meter
+   ========================================== */
+select {
+    cursor: pointer;
+}
+
+progress, meter {
+    width: 200px;
+    height: 20px;
+}
+
+/* ==========================================
+   Aside, Details, Dialog
+   ========================================== */
+aside {
+    background: #fef9e7;
+    padding: 15px;
+    border-left: 5px solid #f1c40f;
+    margin: 10px 0;
+}
+
+details {
+    background: var(--kart-fon);
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+summary {
+    font-weight: bold;
+    color: var(--ikinci-reng);
+}
+
+dialog {
+    border: 2px solid var(--ana-reng);
+    border-radius: var(--kart-radius);
+    padding: 20px;
+}
+
+/* ==========================================
+   Audio ve Video
+   ========================================== */
+audio, video {
+    margin: 10px 0;
+    border-radius: 8px;
+}
+
+iframe {
+    border: 2px solid #ddd;
+    border-radius: 8px;
+}
+
+/* ==========================================
+   Footer
+   ========================================== */
+footer {
+    background: var(--ana-reng);
+    color: white;
+    padding: 20px;
+    border-radius: var(--kart-radius);
+    margin-top: 30px;
+}
+
+footer p {
+    text-align: center;
+}
+
+/* ==========================================
+   Link Stilleri
+   ========================================== */
+a {
+    color: var(--ikinci-reng);
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+a:visited {
+    color: #8e44ad;
+}
+
+a:hover {
+    color: var(--vurgu-rengi);
+    text-decoration: none;
+}
+
+a:active {
+    color: #c0392b;
+}
+
+/* ==========================================
+   Scrollbar Bəzəyi (Webkit brauzerlər)
+   ========================================== */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--ikinci-reng);
+    border-radius: 5px;
+}
+
+/* ==========================================
+   Animasiya (Loader)
+   ========================================== */
+@keyframes don {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loader {
+    width: 40px;
+    height: 40px;
+    margin: 20px auto;
+    border: 5px solid #ddd;
+    border-top-color: var(--ikinci-reng);
+    border-radius: 50%;
+    animation: don 0.8s linear infinite;
+}
+
+/* ==========================================
+   Media Sorğusu (Responsive Dizayn)
+   ========================================== */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+        font-size: 14px;
+    }
+    
+    section {
+        padding: 15px;
+    }
+    
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+    
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* ==========================================
+   Print Stili (Çap üçün)
+   ========================================== */
+@media print {
+    body {
+        background: white;
+        color: black;
+    }
+    
+    nav, button {
+        display: none;
+    }
+}

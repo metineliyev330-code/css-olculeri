@@ -1,14 +1,367 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="az">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"/>
-    <title>Document</title>
+    <meta name="description" content="HTML ve CSS teqlerinin tam numunesi">
+    <meta name="keywords" content="HTML, CSS, teqler, butun">
+    <title>HTML & CSS Bütün Teqlər</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Internal CSS -->
+    <style>
+        /* Internal CSS numunesi */
+        h1 {
+            text-align: center;
+            color: darkblue;
+        }
+    </style>
 </head>
 <body>
-        <div class="metin2">
-        <h2> metin</h2>   
-        </div>
+
+    <!-- ===== BAŞLIQ HİSSƏSİ (HEADER) ===== -->
+    <header>
+        <h1>🌟 HTML & CSS Tam Nümunə</h1>
+        <!-- Naviqasiya menyusu -->
+        <nav>
+            <a href="#bolme1">Bölmə 1</a> |
+            <a href="#bolme2">Bölmə 2</a> |
+            <a href="#bolme3">Bölmə 3</a> |
+            <a href="https://www.google.com" target="_blank" rel="noopener">Google</a>
+        </nav>
+    </header>
+
+    <hr>
+
+    <!-- ===== ƏSAS MƏZMUN (MAIN) ===== -->
+    <main>
+
+        <!-- ===== BÖLMƏ 1: BAŞLIQLAR VƏ MƏTN ===== -->
+        <section id="bolme1">
+            <h2>📝 Başlıqlar və Mətn Elementləri</h2>
+            
+            <!-- h1 - h6 başlıqları -->
+            <h1>Başlıq 1 (ən böyük)</h1>
+            <h2>Başlıq 2</h2>
+            <h3>Başlıq 3</h3>
+            <h4>Başlıq 4</h4>
+            <h5>Başlıq 5</h5>
+            <h6>Başlıq 6 (ən kiçik)</h6>
+
+            <!-- Paraqraf ve mətn formatlaşdırması -->
+            <p>Bu <strong>qalın</strong>, <em>italik</em>, <u>altı xətli</u>, <mark>vurğulanmış</mark>, <small>kiçik</small>, <del>silinmiş</del>, <ins>yeni əlavə</ins>, <sub>alt</sub>, <sup>üst</sup> mətndir.</p>
+            
+            <!-- Sitat ve kod -->
+            <blockquote cite="https://example.com">
+                Bu bir sitatdır (blockquote). İçində <q>qısa sitat (q)</q> da ola bilər.
+            </blockquote>
+            <pre><code>// Kod nümunəsi (pre + code)
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Salam");
+    }
+}</code></pre>
+            
+            <!-- Qısa sitat -->
+            <p>Müəllim dedi: <q>HTML öyrənmək asandır</q></p>
+            
+            <!-- Abbr (qısaltma) -->
+            <p><abbr title="HyperText Markup Language">HTML</abbr> işarələmə dilidir.</p>
+            
+            <!-- Ünvan -->
+            <address>
+                Müəllif: <a href="mailto:example@email.com">Orxan</a><br>
+                Şəhər: Bakı<br>
+                Ölkə: Azərbaycan
+            </address>
+
+            <br>
+
+            <!-- Siyahılar -->
+            <h3>📋 Siyahılar</h3>
+            
+            <!-- Sırasız siyahı -->
+            <h4>Alınacaq meyvələr (ul):</h4>
+            <ul>
+                <li>Alma</li>
+                <li>Armud
+                    <ul>
+                        <li>Yay armudu</li>
+                        <li>Qış armudu</li>
+                    </ul>
+                </li>
+                <li>Banan</li>
+            </ul>
+
+            <!-- Sıralı siyahı -->
+            <h4>Yarış nəticələri (ol):</h4>
+            <ol type="A">
+                <li>Ali</li>
+                <li>Aysel</li>
+                <li>Orxan</li>
+            </ol>
+
+            <!-- Tərif siyahısı -->
+            <h4>Terminlər lüğəti (dl):</h4>
+            <dl>
+                <dt>HTML</dt>
+                <dd>Veb səhifənin strukturunu quran işarələmə dili</dd>
+                <dt>CSS</dt>
+                <dd>Veb səhifəni bəzəyən üslub dili</dd>
+            </dl>
+
+            <!-- Mətn formatı -->
+            <p>Sətir kəsilməsi üçün <br> (br) istifadə olunur.</p>
+            <hr>
+            <p>Üfüqi xətt (hr) yuxarıdadır.</p>
+
+            <!-- Span (sətir element) -->
+            <p>Bu mətndə <span style="color: red; font-weight: bold;">span elementi</span> ilə bir hissə qırmızıdır.</p>
+        </section>
+
+        <!-- ===== BÖLMƏ 2: MEDİA VƏ CƏDVƏLLƏR ===== -->
+        <section id="bolme2">
+            <h2>🖼️ Media və Cədvəllər</h2>
+
+            <!-- Şəkil -->
+            <h3>Şəkil (img):</h3>
+            <img src="https://picsum.photos/200/100" alt="Təsadüfi şəkil" width="200" height="100">
+            
+            <!-- Şəkil mətn ilə -->
+            <figure>
+                <img src="https://picsum.photos/150/150" alt="Nümunə şəkil">
+                <figcaption>Şəkil 1: Təsadüfi nümunə şəkil</figcaption>
+            </figure>
+
+            <br>
+
+            <!-- Cədvəl -->
+            <h3>Cədvəl (table):</h3>
+            <table border="1">
+                <caption>İşçi siyahısı</caption>
+                <thead>
+                    <tr>
+                        <th>Ad</th>
+                        <th>Soyad</th>
+                        <th>Yaş</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ali</td>
+                        <td>Aliyev</td>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+                        <td>Aysel</td>
+                        <td>Məmmədova</td>
+                        <td>22</td>
+                    </tr>
+                    <tr>
+                        <td>Orxan</td>
+                        <td>Hüseynov</td>
+                        <td>30</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">Orta yaş:</td>
+                        <td>25.7</td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <br>
+
+            <!-- Audio -->
+            <h3>Səs (audio):</h3>
+            <audio controls>
+                <source src="audio.mp3" type="audio/mpeg">
+                Brauzeriniz audio elementi dəstəkləmir.
+            </audio>
+
+            <br>
+
+            <!-- Video -->
+            <h3>Video:</h3>
+            <video controls width="300" poster="thumbnail.jpg">
+                <source src="video.mp4" type="video/mp4">
+                Brauzeriniz video elementi dəstəkləmir.
+            </video>
+
+            <br>
+
+            <!-- Iframe (başqa səhifə göstərmək) -->
+            <h3>Iframe:</h3>
+            <iframe src="https://www.wikipedia.org" width="300" height="200" title="Wikipedia"></iframe>
+        </section>
+
+        <!-- ===== BÖLMƏ 3: FORMALAR ===== -->
+        <section id="bolme3">
+            <h2>📝 Formalar</h2>
+
+            <form action="/submit" method="post">
+                <!-- Ad ve soyad -->
+                <label for="ad">Ad:</label>
+                <input type="text" id="ad" name="ad" placeholder="Adınızı yazın" required>
+                <br><br>
+
+                <label for="soyad">Soyad:</label>
+                <input type="text" id="soyad" name="soyad" placeholder="Soyadınızı yazın">
+                <br><br>
+
+                <!-- Email -->
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="example@email.com">
+                <br><br>
+
+                <!-- Şifrə -->
+                <label for="parol">Şifrə:</label>
+                <input type="password" id="parol" name="parol" placeholder="Şifrəni yazın">
+                <br><br>
+
+                <!-- Rəqəm -->
+                <label for="yas">Yaş:</label>
+                <input type="number" id="yas" name="yas" min="1" max="120" value="18">
+                <br><br>
+
+                <!-- Tarix -->
+                <label for="tarix">Doğum tarixi:</label>
+                <input type="date" id="tarix" name="tarix">
+                <br><br>
+
+                <!-- Telefon -->
+                <label for="tel">Telefon:</label>
+                <input type="tel" id="tel" name="tel" placeholder="+994 XX XXX XX XX">
+                <br><br>
+
+                <!-- URL -->
+                <label for="url">Vebsayt:</label>
+                <input type="url" id="url" name="url" placeholder="https://example.com">
+                <br><br>
+
+                <!-- Rəng -->
+                <label for="reng">Sevimli rəng:</label>
+                <input type="color" id="reng" name="reng">
+                <br><br>
+
+                <!-- Fayl yükləmə -->
+                <label for="fayl">Fayl seç:</label>
+                <input type="file" id="fayl" name="fayl">
+                <br><br>
+
+                <!-- Açılan siyahı -->
+                <label for="seher">Şəhər:</label>
+                <select id="seher" name="seher">
+                    <option value="">Seçin</option>
+                    <option value="baki">Bakı</option>
+                    <option value="gence">Gəncə</option>
+                    <option value="sumqayit">Sumqayıt</option>
+                </select>
+                <br><br>
+
+                <!-- Çox seçimli siyahı -->
+                <label for="bacariqlar">Bacarıqlar:</label>
+                <select id="bacariqlar" name="bacariqlar" multiple size="3">
+                    <option>HTML</option>
+                    <option>CSS</option>
+                    <option>JavaScript</option>
+                    <option>Java</option>
+                </select>
+                <br><br>
+
+                <!-- Radio düymələri -->
+                <fieldset>
+                    <legend>Cins:</legend>
+                    <input type="radio" id="kisi" name="cins" value="kisi">
+                    <label for="kisi">Kişi</label>
+                    <input type="radio" id="qadin" name="cins" value="qadin">
+                    <label for="qadin">Qadın</label>
+                </fieldset>
+                <br>
+
+                <!-- Checkbox -->
+                <fieldset>
+                    <legend>Maraqlar:</legend>
+                    <input type="checkbox" id="idman" name="maraq" value="idman">
+                    <label for="idman">İdman</label>
+                    <input type="checkbox" id="musiqi" name="maraq" value="musiqi">
+                    <label for="musiqi">Musiqi</label>
+                    <input type="checkbox" id="kitab" name="maraq" value="kitab">
+                    <label for="kitab">Kitab</label>
+                </fieldset>
+                <br>
+
+                <!-- Mətn sahəsi -->
+                <label for="mesaj">Mesaj:</label><br>
+                <textarea id="mesaj" name="mesaj" rows="4" cols="50" placeholder="Mesajınızı yazın..."></textarea>
+                <br><br>
+
+                <!-- Düymələr -->
+                <button type="submit">Göndər</button>
+                <button type="reset">Təmizlə</button>
+                <button type="button" onclick="alert('Salam!')">Kliklə</button>
+            </form>
+        </section>
+
+        <!-- ===== BÖLMƏ 4: SEMANTİK ELEMENTLƏR ===== -->
+        <section>
+            <h2>🧩 Semantik Elementlər</h2>
+            
+            <article>
+                <h3>Məqalə (article)</h3>
+                <p>Bu, bir məqalədir. Müstəqil məzmun daşıyır.</p>
+            </article>
+
+            <aside>
+                <h3>Yan panel (aside)</h3>
+                <p>Bu, əlavə məlumatdır.</p>
+            </aside>
+
+            <details>
+                <summary>Daha çox məlumat (details + summary)</summary>
+                <p>Bu gizli məlumatdır. İstifadəçi kliklədikdə açılır.</p>
+            </details>
+
+            <dialog open>
+                <p>Bu bir dialoq pəncərəsidir (dialog).</p>
+                <button onclick="this.parentElement.close()">Bağla</button>
+            </dialog>
+
+            <!-- Məlumat siyahısı (datalist) -->
+            <label for="brauzer">Brauzer seç:</label>
+            <input list="brauzerler" id="brauzer" name="brauzer">
+            <datalist id="brauzerler">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Edge">
+            </datalist>
+
+            <!-- Proqress bar -->
+            <br><br>
+            <label for="progress">Yüklənmə:</label>
+            <progress id="progress" value="70" max="100">70%</progress>
+
+            <!-- Sayğac (meter) -->
+            <br>
+            <label for="disk">Disk istifadəsi:</label>
+            <meter id="disk" value="0.6" min="0" max="1">60%</meter>
+
+            <!-- BDO (mətn istiqaməti) -->
+            <p><bdo dir="rtl">Bu mətn sağdan sola yazılır (ərəbcə kimi).</bdo></p>
+        </section>
+    </main>
+
+    <hr>
+
+    <!-- ===== ALT HİSSƏ (FOOTER) ===== -->
+    <footer>
+        <p>&copy; 2025 Bütün hüquqlar qorunur. &trade; &reg; &euro; &hearts;</p>
+        <p>Səhifə sonu.</p>
+    </footer>
+
+    <!-- Inline JavaScript -->
+
 </body>
 </html>
